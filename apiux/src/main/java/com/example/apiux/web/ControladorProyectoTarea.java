@@ -39,7 +39,7 @@ public class ControladorProyectoTarea {
         TareasProyecto tareasProyecto = proyectoTareasServ.encontrarporId(proy_id);
         return new ResponseEntity<TareasProyecto>(tareasProyecto,HttpStatus.OK);
     }
-    @GetMapping("/delete/{proy_id}")
+    @DeleteMapping("/delete/{proy_id}")
     public ResponseEntity<?> borrarTareas(@PathVariable Long proy_id){
 
         proyectoTareasServ.borrar(proy_id);
